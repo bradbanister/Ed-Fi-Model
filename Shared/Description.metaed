@@ -1,0 +1,4 @@
+Shared String Description [38]
+    documentation "A detailed description of the entity."
+    min length 1
+    max length 1024

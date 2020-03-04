@@ -1,0 +1,16 @@
+Domain Finance
+    documentation
+"The Finance domain is designed to represent relevant financial information, including:
+* Budgets and actuals
+* Federal Fund allocations and expenses
+* Staff and contracted staff actuals
+
+Core to the Finance model is the Account entity, representing the chart of accounts, or an organization of aggregate accounts. The various codes (e.g., Object, Function, Fund) specific to the EducationOrganization are represented by AccountCodeDescriptor."
+    domain entity Account
+    domain entity AccountCode
+    domain entity Actual
+    domain entity Budget
+    domain entity ContractedStaff
+    domain entity EducationOrganization
+    domain entity Payroll
+    domain entity Staff

@@ -1,0 +1,9 @@
+Association StaffDisciplineIncidentAssociation [2882]
+    documentation "This association indicates those staff who were victims, perpetrators, witnesses, and reporters for a discipline incident."
+    domain entity Staff [2883]
+        documentation "Relates the Staff associated with the DisciplineIncident."
+    domain entity DisciplineIncident [2884]
+        documentation "Reference to the DisciplineIncident associated with the Staff."
+    descriptor DisciplineIncidentParticipationCode [2885]
+        documentation "The role or type of participation of a student in a discipline incident (e.g., Victim, Perpetrator, Witness, Reporter)."
+        is required collection

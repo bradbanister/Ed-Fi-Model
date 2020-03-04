@@ -1,0 +1,17 @@
+Association StudentDisciplineIncidentAssociation [607]
+    documentation "This association indicates those students who were victims, perpetrators, witnesses, and reporters for a discipline incident."
+    domain entity Student [1072]
+        documentation "Relates the Student associated with the DisciplineIncident."
+    domain entity DisciplineIncident [1070]
+        documentation "Reference to the DisciplineIncident associated with the Student."
+    descriptor StudentParticipationCode [1071]
+        documentation "The role or type of participation of a student in a discipline incident; 
+        for example:
+        Victim
+        Perpetrator
+        Witness
+        Reporter."
+        is required
+    common Behavior [1069]
+        documentation "Describes behavior by category and provides a detailed description."
+        is optional collection

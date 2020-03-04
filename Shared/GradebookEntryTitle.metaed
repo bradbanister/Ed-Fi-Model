@@ -1,0 +1,4 @@
+Shared String GradebookEntryTitle [52]
+    documentation "The name or title of the activity to be recorded in the gradebook entry."
+    min length 1
+    max length 60

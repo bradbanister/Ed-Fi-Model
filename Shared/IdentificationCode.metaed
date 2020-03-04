@@ -1,0 +1,4 @@
+Shared String IdentificationCode [57]
+    documentation "A unique number or alphanumeric code assigned to a space, room, site, building, individual, organization, program, or institution by a school, school system, a state, or other agency or entity."
+    min length 1
+    max length 60

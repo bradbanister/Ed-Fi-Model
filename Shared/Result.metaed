@@ -1,0 +1,4 @@
+Shared String Result [98]
+    documentation "A meaningful raw score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc."
+    min length 1
+    max length 35

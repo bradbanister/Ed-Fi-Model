@@ -1,0 +1,38 @@
+Domain Entity LearningObjective [566]
+    deprecated "Users of this element are advised to use LearningStandard instead. Expect removal of this element in a future release."
+    documentation "This entity represents identified learning objectives for courses in specific grades."
+    shared string LearningStandardId named LearningObjectiveId [1487]
+        documentation "The identifier for the specific learning objective in the context of a standard (e.g., 111.15.3.1.A)."
+        is part of identity
+    common ContentStandard [1485]
+        documentation "A reference to the type of content standard (e.g., state, national)"
+        is optional
+    shared string Objective  [1490]
+        documentation "The designated title of the LearningObjective."
+        is required
+    shared string Description [1486]
+        documentation "The description of the LearningObjective."
+        is optional
+    descriptor AcademicSubject [1484]
+        documentation "The description of the content or subject area (e.g., arts, mathematics, reading, stenography, or a foreign language) of an assessment."
+        is required collection
+    descriptor GradeLevel [1491]
+        documentation "The grade level for which the LearningObjective is targeted. The semantics of null is assumed to mean that the learning objective is not associated with any grade level."
+        is optional collection
+        role name Objective
+    shared string Nomenclature [1489]
+        documentation "Reflects the specific nomenclature used for the LearningObjective."
+        is optional
+    shared string Criteria named SuccessCriteria [1493]
+        documentation "One or more statements that describes the criteria used by teachers and students to check for attainment of a learning objective. This criteria gives clear indications as to the degree to which learning is moving through the Zone or Proximal Development toward independent achievement of the LearningObjective."
+        is optional
+    domain entity LearningStandard [1488]
+        documentation "LearningStandard(s) included in this objective."
+        is optional collection
+    domain entity LearningObjective [1492]
+        documentation "Provide user information to lookup and link to an existing learning objective which serves as a method to group other learning objectives."
+        is optional
+        role name Parent
+    shared string URI named Namespace [2439]
+        documentation "Namespace for the LearningObjective."
+        is part of identity

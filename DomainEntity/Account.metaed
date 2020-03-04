@@ -1,0 +1,19 @@
+Domain Entity Account [537]
+    documentation "This financial entity represents a funding source combined with its purpose and type of transaction. It provides a formal record of the debits and credits relating to the specific account."
+    shared string AccountIdentifier [1206]
+        documentation "The alphanumeric string that identifies the account."
+        is part of identity
+    domain entity AccountCode [1205]
+        documentation "The set of account codes defined for the education accounting system organized by account code type (e.g., fund, function, object) that map to the account."
+        is required collection
+        //merge AccountCode.FiscalYear with FiscalYear
+        merge AccountCode.EducationOrganization with EducationOrganization
+    integer FiscalYear [1208]
+        documentation "The financial accounting year."
+        is part of identity
+    domain entity EducationOrganization [1207]
+        documentation "Relates the account to an Education Organization."
+        is part of identity
+    shared string AccountName [2831]
+        documentation "A descriptive name for the account."
+        is optional

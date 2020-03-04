@@ -1,0 +1,5 @@
+Association StudentProgramAssociation based on GeneralStudentProgramAssociation [612]
+    documentation "This association represents the Program(s) that a student participates in or is served by."
+    common Service  [1109]
+        documentation "Indicates the Service(s) being provided to the Student by the Program."
+        is optional collection

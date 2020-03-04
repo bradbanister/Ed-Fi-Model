@@ -1,0 +1,7 @@
+Descriptor ResponseIndicator [222]
+    documentation "Indicator of the response.  For example:
+    Nonscorable response
+    Ineffective response
+    Effective response
+    Partial response
+    ..."

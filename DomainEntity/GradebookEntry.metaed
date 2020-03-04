@@ -1,0 +1,38 @@
+Domain Entity GradebookEntry [560]
+    documentation "This entity represents an assignment, homework, or classroom assessment to be recorded in a gradebook."
+    allow primary key updates
+    shared string GradebookEntryTitle [1424]
+        documentation "The name or title of the activity to be recorded in the GradebookEntry."
+        is part of identity
+        is queryable field
+    descriptor GradebookEntryType [1425]
+        documentation "The type of the GradebookEntry; for example, homework, assignment, quiz, unit test, oral presentation, etc."
+        is optional
+        is queryable field
+    date DateAssigned [1422]
+        documentation "The date the assignment, homework, or assessment was assigned or executed."
+        is part of identity
+        is queryable field
+    shared string Description [1423]
+        documentation "A description of the assignment, homework, or classroom assessment."
+        is optional
+    domain entity LearningStandard [1428]
+        documentation "LearningStandard(s) associated with the GradebookEntry."
+        is optional collection
+    domain entity LearningObjective [1427]
+        deprecated "Users of this element are advised to use LearningStandard instead. Expect removal of this element in a future release."
+        documentation "LearningObjectives associated with the GradebookEntry."
+        is optional collection
+    domain entity Section [1429]
+        documentation "The Section associated with the GradebookEntry."
+        is part of identity
+        is queryable field
+    domain entity GradingPeriod [1426]
+        documentation "Identifies the grading period for the GradebookEntry."
+        is optional
+        is queryable field
+        merge GradingPeriod.School with Section.CourseOffering.Session.School
+        merge GradingPeriod.SchoolYear with Section.CourseOffering.Session.SchoolYear
+    date DueDate [2845]
+        documentation "The date the assignment, homework, or assessment is due."
+        is optional

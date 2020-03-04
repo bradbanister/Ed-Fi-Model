@@ -1,0 +1,4 @@
+Shared String SectionIdentifier [114]
+    documentation "A unique identifier for the Section, that is defined by the classroom, the subjects taught, and the instructors that are assigned."
+    min length 1
+    max length 255

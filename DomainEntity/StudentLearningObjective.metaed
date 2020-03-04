@@ -1,0 +1,25 @@
+Domain Entity StudentLearningObjective [591]
+    deprecated "Users of this element are advised to use Grade.LearningStandardGrade instead. Expect removal of this element in a future release."
+    documentation "This entity represents the competency assessed or evaluated for the student against a specific LearningObjective."
+    domain entity LearningObjective [1763]
+        documentation "The  LearningObjective evaluated or assessed for the student."
+        is part of identity
+    descriptor CompetencyLevel [1760]
+        documentation "The CompetencyLevel assessed for the student for the referenced LearningObjective."
+        is required
+    shared string DiagnosticStatement [1761]
+        documentation "A statement provided by the teacher that provides information in addition to the grade or assessment score."
+        is optional
+    domain entity GradingPeriod [1762]
+        documentation "Relates the LearningObjective to a grading period."
+        is part of identity
+        role name GradingPeriod
+    domain entity Student [1765]
+        documentation "Relates the Student associated with the LearningObjective."
+        is part of identity
+    choice StudentLearningObjectiveSectionOrProgramChoice [2512]
+        documentation "Relates the student and the Section or Program with the LearningObjective."
+        is optional
+        merge StudentLearningObjectiveSectionOrProgramChoice.StudentSectionAssociation.Section.CourseOffering.Session with GradingPeriod.Session
+        merge StudentLearningObjectiveSectionOrProgramChoice.StudentSectionAssociation.Student with Student
+        merge StudentLearningObjectiveSectionOrProgramChoice.GeneralStudentProgramAssociation.Student with Student

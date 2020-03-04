@@ -1,0 +1,4 @@
+Shared String ResponseValue [2888]
+    documentation "The response value, often an option number or code value (e.g., 1, 2, A, B, true, false)."
+    min length 1
+    max length 60

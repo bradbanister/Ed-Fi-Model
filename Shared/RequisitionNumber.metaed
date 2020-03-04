@@ -1,0 +1,4 @@
+Shared String RequisitionNumber [96]
+    documentation "The number or identifier assigned to an open staff position, typically a requisition number assigned by Human Resources."
+    min length 1
+    max length 20

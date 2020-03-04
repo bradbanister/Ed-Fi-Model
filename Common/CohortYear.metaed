@@ -1,0 +1,8 @@
+Common CohortYear [493]
+    documentation "The type and year of a cohort (e.g., 9th grade) the student belongs to."
+    enumeration SchoolYear [768]
+        documentation "The value of the  school year for the Cohort."
+        is part of identity
+    descriptor CohortYearType [767]
+        documentation "The type of cohort year (9th grade, graduation)."
+        is part of identity

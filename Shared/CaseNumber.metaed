@@ -1,0 +1,4 @@
+Shared String CaseNumber [15]
+    documentation "The case number assigned to the incident by law enforcement or other organization."
+    min length 1
+    max length 20

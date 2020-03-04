@@ -1,0 +1,20 @@
+Domain Entity StudentSectionAttendanceEvent [594]
+    documentation "This event entity represents the recording of whether a student is in attendance for a section."
+    inline common AttendanceEvent [1775]
+        documentation "Details of the AttendanceEvent."
+        is required
+    domain entity Student [1777]
+        documentation "Relates the Student associated with the AttendanceEvent."
+        is part of identity
+    domain entity Section [1776]
+        documentation "Relates the Section associated with the AttendanceEvent."
+        is part of identity
+    shared integer AttendanceEventDuration named SectionAttendanceDuration [2859]
+        documentation "The duration in minutes of the section attendance event."
+        is optional
+    time ArrivalTime [2915]
+        documentation "The time of day the student arrived for the attendance event in ISO 8601 format."
+        is optional
+    time DepartureTime [2916]
+        documentation "The time of day the student departed for the attendance event in ISO 8601 format."
+        is optional

@@ -1,0 +1,4 @@
+Shared String CourseSetName [31]
+    documentation "Identifying name given to a collection of courses."
+    min length 1
+    max length 120

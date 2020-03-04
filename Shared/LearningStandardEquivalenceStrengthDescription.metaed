@@ -1,0 +1,4 @@
+Shared String LearningStandardEquivalenceStrengthDescription [2903]
+    documentation "Captures supplemental information on the relationship. Recommended for use only when the match is partial."
+    min length 1
+    max length 255

@@ -1,0 +1,4 @@
+Shared String ContactTitle [2685]
+    documentation "The title of the contact in the context of the EducationOrganization."
+    min length 1
+    max length 75

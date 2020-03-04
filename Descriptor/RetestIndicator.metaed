@@ -1,0 +1,6 @@
+Descriptor RetestIndicator [226]
+    documentation "Indicator if the test was retaken.  For example:
+    Primary administration
+    First retest
+    Second retest
+    ..."

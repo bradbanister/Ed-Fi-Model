@@ -1,0 +1,6 @@
+Interchange Parent [2521]
+    documentation "This interchange defines parents and captures the familial relationship between the student and the parent as well as indicators for the parent for residence, primary parental contact, and emergency contact."
+    use case documentation "1. Exchange school or LEA new or updated parent information.
+    2. Exchange parent contact or emergency contact information."
+    domain entity Parent [2521-001]
+    association StudentParentAssociation [2521-002]

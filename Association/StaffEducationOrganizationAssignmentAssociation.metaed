@@ -1,0 +1,29 @@
+Association StaffEducationOrganizationAssignmentAssociation [600]
+    documentation "This association indicates the education organization to which a staff member provides services; also known as school of service."
+    domain entity Staff [1027]
+        documentation "The Staff assigned to the EducationOrganization."
+    domain entity EducationOrganization [1021]
+        documentation "The EducationalOrganization to which the Staff member provides services."
+    descriptor StaffClassification [1025]
+        documentation "The titles of employment, official status, or rank of education staff."
+        is part of identity
+    shared string PositionTitle [1024]
+        documentation "The descriptive name of an individual's position."
+        is optional
+    date BeginDate [1020]
+        documentation "Month, day, and year of the start or effective date of a staff member's employment, contract, or relationship with the LEA."
+        is part of identity
+    date EndDate [1022]
+        documentation "Month, day, and year of the end or termination date of a staff member's employment, contract, or relationship with the LEA."
+        is optional
+    integer OrderOfAssignment [1023]
+        documentation "Describes whether the assignment is this the staff member's primary assignment, secondary assignment, etc."
+        is optional
+    association StaffEducationOrganizationEmploymentAssociation [1026]
+        documentation "A reference to the employment association."
+        is optional
+        role name StaffEducationOrganizationEmploymentAssociation shorten to Employment
+        merge StaffEducationOrganizationEmploymentAssociation.Staff with Staff
+    domain entity Credential [2645]
+        documentation "Reference to the Credential that is the basis for this assignment."
+        is optional

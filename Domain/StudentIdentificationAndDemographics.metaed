@@ -1,0 +1,10 @@
+Domain StudentIdentificationAndDemographics
+    documentation
+"The Student Identification and Demographics domain represents the core information about students and parents.
+* The Student entity captures important information and characteristics of a student.
+* The Parent entity spans all variants of parent, guardian. It can also hold other important contacts that have been approved by the parent/guardian for contact in cases of emergency or even pick-up from school.
+* The StudentParentAssociation links students and parents and indicates the relation."
+    domain entity Parent
+    domain entity Student
+    association StudentParentAssociation
+    association StudentEducationOrganizationAssociation

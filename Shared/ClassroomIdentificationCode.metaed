@@ -1,0 +1,4 @@
+Shared String ClassroomIdentificationCode [19]
+    documentation "A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity."
+    min length 1
+    max length 60

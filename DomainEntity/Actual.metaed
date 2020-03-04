@@ -1,0 +1,11 @@
+Domain Entity Actual [539]
+    documentation "This financial entity represents the sum of the financial transactions to date relating to a specific account."
+    currency AmountToDate [1217]
+        documentation "Current balance for the account."
+        is required
+    date AsOfDate [1218]
+        documentation "The date of the reported actual element."
+        is part of identity
+    domain entity Account [1216]
+        documentation "Account with which the Actual is associated."
+        is part of identity

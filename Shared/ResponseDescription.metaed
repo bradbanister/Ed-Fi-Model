@@ -1,0 +1,4 @@
+Shared String ResponseDescription [2887]
+    documentation "Text provided to define a response value."
+    min length 1
+    max length 1024

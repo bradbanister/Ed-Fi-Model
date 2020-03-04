@@ -1,0 +1,4 @@
+Shared String Department [37]
+    documentation "The department or suborganization the employee/contractor is associated with in the Education Organization."
+    min length 1
+    max length 60

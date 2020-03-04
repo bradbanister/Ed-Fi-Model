@@ -1,0 +1,14 @@
+Common CTEProgram [500]
+    documentation "The career cluster or pathway representing the career path of the Vocational/Career Tech concentrator."
+    descriptor CareerPathway [799]
+        documentation "A sequence of courses within an area of interest that is a student's educational road map to a chosen career."
+        is part of identity
+    shared string CIPCode [800]
+        documentation "Number and description of the CIP Code associated with the student's CTEProgram."
+        is optional
+    bool PrimaryCTEProgramIndicator [802]
+        documentation "A boolean indicator of whether this CTEProgram, is the student's primary CTEProgram."
+        is optional
+    bool CTEProgramCompletionIndicator [801]
+        documentation "A boolean indicator of whether the Student has completed the CTEProgram."
+        is optional

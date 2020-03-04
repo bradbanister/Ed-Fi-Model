@@ -1,0 +1,2 @@
+Descriptor GradingPeriod [178]
+    documentation "This descriptor defines the name of the period for which grades are reported. The mapping of descriptor values to known Ed-Fi enumeration values is required."

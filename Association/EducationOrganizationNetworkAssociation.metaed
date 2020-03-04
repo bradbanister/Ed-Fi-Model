@@ -1,0 +1,13 @@
+Association EducationOrganizationNetworkAssociation [596]
+    documentation "Properties of the association between the EducationOrganization and its network(s)."
+    domain entity EducationOrganizationNetwork [1005]
+        documentation "A reference to the EducationOrganizationNetwork to which this education organization is a member."
+    domain entity EducationOrganization [1007]
+        documentation "The EducationOrganization member in the network."
+        role name Member
+    date BeginDate [1004]
+        documentation "The date on which the EducationOrganization joined this network."
+        is optional
+    date EndDate [1006]
+        documentation "The date on which the EducationOrganization left this network."
+        is optional

@@ -1,0 +1,29 @@
+Association StudentSectionAssociation [614]
+    documentation "This association indicates the course sections to which a student is assigned."
+    allow primary key updates
+    domain entity Student [1133]
+        documentation "The Student enrolled in the Section."
+    domain entity Section [1132]
+        documentation "The Section the Student is enrolled in."
+    date BeginDate [1128]
+        documentation "Month, day, and year of the Student's entry or assignment to the Section."
+        is part of identity
+    date EndDate [1129]
+        documentation "Month, day, and year of the withdrawal or exit of the Student from the Section."
+        is optional
+    bool HomeroomIndicator [1130]
+        documentation "Indicates the Section is the student's homeroom. Homeroom period may the convention for taking daily attendance."
+        is optional
+    descriptor RepeatIdentifier [1131]
+        documentation "An indication as to whether a student has previously taken a given course.
+        Repeated, counted in grade point average
+        Repeated, not counted in grade point average
+        Not repeated
+        Other."
+        is optional
+    bool TeacherStudentDataLinkExclusion [1134]
+        documentation "Indicates that the student-section combination is excluded from calculation of value-added or growth attribution calculations used for a particular teacher evaluation."
+        is optional
+    descriptor AttemptStatus [2806]
+        documentation "An indication of the student's completion status for the section."
+        is optional

@@ -1,0 +1,4 @@
+Shared String DisabilityDiagnosis [42]
+    documentation "A description of the disability diagnosis."
+    min length 1
+    max length 80

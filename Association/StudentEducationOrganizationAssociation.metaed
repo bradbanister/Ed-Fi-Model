@@ -1,0 +1,74 @@
+Association StudentEducationOrganizationAssociation
+    documentation "This association represents student information as reported in the context of the student's relationship to the Education Organization. Enrollment relationship semantics are covered by StudentSchoolAssociation."
+    domain entity Student [2782]
+        documentation "A reference to the Student."
+    domain entity EducationOrganization [2783]
+        documentation "A reference to the Education Organization representing the context of the student information."
+    common StudentIdentificationCode [1703]
+        documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a student."
+        is optional collection
+        is queryable field
+    descriptor Sex [1701]
+        documentation "The student's gender as last reported to the education organization."
+        is required
+        is queryable field
+    common Address [1680]
+        documentation "The set of elements that describes an address, including the street address, city, state, and ZIP code."
+        is optional collection
+    common InternationalAddress [1689]
+        documentation "The set of elements that describes an international address."
+        is optional collection
+    common Telephone [1706]
+        documentation "The 10-digit telephone number, including the area code, for the person."
+        is optional collection
+    common ElectronicMail [1687]
+        documentation "The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the individual or organization belongs."
+        is optional collection
+    shared string ProfileThumbnail [1697]
+        documentation "Locator reference for the student photo. The specification for that reference is left to local definition."
+        is optional
+    bool HispanicLatinoEthnicity [1688]
+        documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race, as last reported to the education organization. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino."""
+        is optional
+        is queryable field
+    descriptor OldEthnicity [1695]
+        documentation "Previous definition of Ethnicity combining Hispanic/Latino and race:
+        1 - American Indian or Alaskan Native
+        2 - Asian or Pacific Islander
+        3 - Black, not of Hispanic origin
+        4 - Hispanic
+        5 - White, not of Hispanic origin."
+        is optional
+    descriptor Race [1699]
+        documentation "The general racial category which most clearly reflects the individual's recognition of his or her community or with which the individual most identifies as last reported to the education organization. The data model allows for multiple entries so that each individual can specify all appropriate races."
+        is optional collection
+        is queryable field
+    descriptor TribalAffiliation [2784]
+        documentation "An American Indian tribe with which the student is affiliated as last reported to the education organization."
+        is optional collection
+    common StudentCharacteristic [1702]
+        documentation "Reflects important characteristics of the student's home situation:
+        Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth."
+        is optional collection
+    descriptor LimitedEnglishProficiency [1692]
+        documentation "An indication that the student has been identified as limited English proficient by the Language Proficiency Assessment Committee (LPAC), or English proficient."
+        is optional
+    common Language [1690]
+        documentation "The language(s) the individual uses to communicate. It is strongly recommended that entries use only ISO 639-3 language codes."
+        is optional collection
+    common Disability [1684]
+        documentation "The disability condition(s) that best describes an individual's impairment, as determined by evaluation(s) conducted by the education organization."
+        is optional collection
+    common ProgramParticipation [1698]
+        deprecated "Users of this element are advised to use StudentProgramAssociation instead. Expect removal of this element in a future release."
+        documentation "Key programs the student is participating in or receives services from."
+        is optional collection
+    common CohortYear [1683]
+        documentation "The type and year of a cohort (e.g., 9th grade) the student belongs to as determined by the year that student entered a specific grade."
+        is optional collection
+    common StudentIndicator [1704]
+        documentation "Indicator(s) or metric(s) computed for the student (e.g., at risk) to influence more effective education or direct specific interventions."
+        is optional collection
+    shared string IdentificationCode named LoginId [1693]
+        documentation "The login ID for the user; used for security access control interface."
+        is optional

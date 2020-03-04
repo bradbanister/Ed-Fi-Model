@@ -1,0 +1,4 @@
+Shared String TelephoneNumber [108]
+    documentation "The telephone number including the area code, and extension, if applicable."
+    min length 1
+    max length 24

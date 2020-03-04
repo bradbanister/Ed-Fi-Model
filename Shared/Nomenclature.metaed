@@ -1,0 +1,4 @@
+Shared String Nomenclature [74]
+    documentation "Reflects the common nomenclature for an element."
+    min length 1
+    max length 35

@@ -1,0 +1,4 @@
+Shared String ItemText [2886]
+    documentation "The text of the item."
+    min length 1
+    max length 1024

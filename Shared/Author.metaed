@@ -1,0 +1,4 @@
+Shared String Author [12]
+    documentation "The person or organization chiefly responsible for intellectual content."
+    min length 1
+    max length 100

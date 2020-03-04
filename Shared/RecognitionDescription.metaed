@@ -1,0 +1,4 @@
+Shared String RecognitionDescription [94]
+    documentation "The description of recognition given to the student for accomplishments in a co-curricular or extra-curricular activity."
+    min length 1
+    max length 80

@@ -1,0 +1,48 @@
+Domain Entity ReportCard [577]
+    documentation "This educational entity represents the collection of student grades for courses taken during a grading period."
+    domain entity Grade [1585]
+        documentation "Grades for the classes attended by the Student for this grading period."
+        is optional collection
+        merge Grade.GradingPeriod with GradingPeriod
+        merge Grade.StudentSectionAssociation.Student with Student
+    domain entity StudentCompetencyObjective [1590]
+        documentation "The Student competency evaluations associated for this grading period."
+        is optional collection
+        merge StudentCompetencyObjective.GradingPeriod with GradingPeriod
+        merge StudentCompetencyObjective.Student with Student
+    domain entity StudentLearningObjective [1591]
+        deprecated "Users of this element are advised to use ReportCard.Grade.LearningStandardGrade instead. Expect removal of this element in a future release."
+        documentation "The StudentLearningObjective evaluations associated for this grading period."
+        is optional collection
+        merge StudentLearningObjective.GradingPeriod with GradingPeriod
+        merge StudentLearningObjective.Student with Student
+    shared decimal GPA named GPAGivenGradingPeriod [1584]
+        deprecated "Users of this element are advised to use GradePointAverage instead, which supports capture of multiple (e.g., weighted, unweighted) GPAs. Expect removal of this element in a future release."
+        documentation "A measure of average performance in all courses taken by an individual for the current grading period."
+        is optional
+    shared decimal GPA named GPACumulative [1583]
+        deprecated "Users of this element are advised to use GradePointAverage instead, which supports capture of multiple (e.g., weighted, unweighted) GPAs. Expect removal of this element in a future release."
+        documentation "A measure of cumulative average performance in all courses taken by an individual from the beginning of the school year through the current grading period."
+        is optional
+    common GradePointAverage [2865]
+        documentation "A measure of average performance for courses taken by an individual."
+        is optional collection
+    shared decimal NumberOfDaysAbsent [1587]
+        documentation "The number of days an individual is absent when school is in session during a given reporting period."
+        is optional
+    shared decimal NumberOfDaysInAttendance [1588]
+        documentation "The number of days an individual is present when school is in session during a given reporting period."
+        is optional
+    shared integer NumberOfDaysTardy [1589]
+        documentation "The number of days an individual is tardy during a given reporting period."
+        is optional
+    domain entity Student [1592]
+        documentation "Identifies the student that is associated with the ReportCard."
+        is part of identity
+    domain entity EducationOrganization [1582]
+        documentation "Identifies the EducationOrganization that issued the ReportCard."
+        is part of identity
+    domain entity GradingPeriod [1586]
+        documentation "Identifies the grading period for this report card."
+        is part of identity
+        role name GradingPeriod

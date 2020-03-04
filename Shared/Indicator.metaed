@@ -1,0 +1,4 @@
+Shared String Indicator [60]
+    documentation "Indicator or metric computed for the student (e.g., at risk) to influence more effective education or direct specific interventions."
+    min length 1
+    max length 35

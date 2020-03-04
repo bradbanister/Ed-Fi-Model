@@ -1,0 +1,4 @@
+Shared String Coordinate [28]
+    documentation "The data type to specify latitude or longitude."
+    min length 1
+    max length 20

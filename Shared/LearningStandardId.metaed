@@ -1,0 +1,4 @@
+Shared String LearningStandardId [67]
+    documentation "A unique number or alphanumeric code assigned to a Learning Standard."
+    min length 1
+    max length 60

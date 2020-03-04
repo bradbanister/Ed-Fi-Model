@@ -1,0 +1,11 @@
+Domain Entity Budget [544]
+    documentation "This financial entity represents the amount of monies allocated to be spent or received by an education organization as related to a specific account."
+    currency Amount [1268]
+        documentation "Amount budgeted for the account for this fiscal year."
+        is required
+    date AsOfDate [1269]
+        documentation "The date of the reported budget element."
+        is part of identity
+    domain entity Account [1267]
+        documentation "Account with which the Budget is associated."
+        is part of identity

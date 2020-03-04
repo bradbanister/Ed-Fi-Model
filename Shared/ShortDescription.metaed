@@ -1,0 +1,4 @@
+Shared String ShortDescription [103]
+    documentation "A shortened description for reference."
+    min length 1
+    max length 75

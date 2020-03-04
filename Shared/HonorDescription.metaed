@@ -1,0 +1,4 @@
+Shared String HonorDescription [55]
+    documentation "A description of the type of academic distinctions earned by or awarded to the individual."
+    min length 1
+    max length 80

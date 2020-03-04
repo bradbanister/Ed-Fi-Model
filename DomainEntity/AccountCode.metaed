@@ -1,0 +1,18 @@
+Domain Entity AccountCode [2832]
+    documentation "The set of account codes defined by an education organization for a fiscal year."
+    shared string AccountCodeNumber [2833]
+        documentation "An account code defined for the education accounting system by the education organization."
+        is part of identity
+    descriptor AccountClassification [2834]
+        documentation "The type of account code associated with the account."
+        is part of identity
+    domain entity EducationOrganization [2835]
+        documentation "A reference to the education organization for which the codes are applicable."
+        is part of identity
+    integer FiscalYear [2836]
+        documentation "The financial accounting year."
+        is part of identity
+    string AccountCodeDescription [2837]
+        documentation "A description of the account code."
+        is optional
+        max length 1024

@@ -1,0 +1,4 @@
+Shared String AccountCodeCategory [1]
+    documentation "The type of the account code (e.g., fund, function, object)."
+    min length 1
+    max length 20

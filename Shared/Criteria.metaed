@@ -1,0 +1,4 @@
+Shared String Criteria [35]
+    documentation "The criteria for competency-based completion of the achievement/award."
+    min length 1
+    max length 150

@@ -1,0 +1,11 @@
+Common StudentObjectiveAssessment [534]
+    documentation "The student's score and/or performance levels earned for an ObjectiveAssessment."
+    common ScoreResult [912]
+        documentation "A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc."
+        is required collection
+    common PerformanceLevel [888]
+        documentation "The PerformanceLevel(s) achieved for the ObjectiveAssessment."
+        is optional collection
+    domain entity ObjectiveAssessment [946]
+        documentation "Reference to the test objective that is being measured by the objective-level assessment."
+        is part of identity

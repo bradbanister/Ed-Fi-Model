@@ -1,0 +1,25 @@
+Association StaffSectionAssociation [604]
+    documentation "This association indicates the class sections to which a staff member is assigned."
+    domain entity Staff [1053]
+        documentation "The Staff member assigned to the Section."
+    domain entity Section [1052]
+        documentation "The Section the Staff member is assigned to."
+    descriptor ClassroomPosition [1048]
+        documentation "The type of position the Staff member holds in the specific class/section; for example:
+        Teacher of Record, Assistant Teacher, Support Teacher, Substitute Teacher..."
+        is required
+    date BeginDate [1047]
+        documentation "Month, day, and year of a teacher's assignment to the Section. If blank, defaults to the first day of the first grading period for the Section."
+        is optional
+    date EndDate [1049]
+        documentation "Month, day, and year of the last day of a staff member's assignment to the Section."
+        is optional
+    bool HighlyQualifiedTeacher [1050]
+        documentation "An indication of whether a teacher is classified as highly qualified for his/her assignment according to state definition. This attribute indicates the teacher is highly qualified for this section being taught."
+        is optional
+    bool TeacherStudentDataLinkExclusion [1054]
+        documentation "Indicates that the entire section is excluded from calculation of value-added or growth attribution calculations used for a particular teacher evaluation."
+        is optional
+    percent PercentageContribution [1051]
+        documentation "Indicates the percentage of the total scheduled course time, academic standards, and/or learning activities delivered in this section by this staff member. A teacher of record designation may be based solely or partially on this contribution percentage."
+        is optional

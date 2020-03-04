@@ -1,0 +1,2 @@
+Descriptor AccountClassification [2811]
+    documentation "This descriptor holds the set of account code categories defined for the education accounting system organized by account code type (e.g., fund, function, object)."

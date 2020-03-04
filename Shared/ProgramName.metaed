@@ -1,0 +1,4 @@
+Shared String ProgramName [88]
+    documentation "The formal name of the program of instruction, training, services, or benefits available through federal, state, or local agencies."
+    min length 1
+    max length 60

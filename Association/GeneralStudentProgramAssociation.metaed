@@ -1,0 +1,25 @@
+Association GeneralStudentProgramAssociation
+    documentation "This association base class represents the basic relationship between students and programs."
+domain entity Student [1110]
+    documentation "The Student associated with the Program."
+domain entity Program [1106]
+    documentation "The Program associated with the Student."
+    role name Program
+date BeginDate [1103]
+    documentation "The earliest date the student is involved with the program. Typically, this is the date the student becomes eligible for the program."
+    is part of identity
+date EndDate [1105]
+    documentation "The month, day, and year on which the Student exited the Program or stopped receiving services."
+    is optional
+descriptor ReasonExited [1107]
+    documentation "The reason the child left the Program within a school or district."
+    is optional
+domain entity EducationOrganization [1104]
+    documentation "The EducationOrganization where the Student is participating in or receiving the Program services."
+    is part of identity
+bool ServedOutsideOfRegularSession [1108]
+    documentation "Indicates whether the Student received services during the summer session or between sessions."
+    is optional
+common ParticipationStatus [2776]
+    documentation "The status of the student's program participation."
+    is optional

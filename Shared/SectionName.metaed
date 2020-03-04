@@ -1,0 +1,4 @@
+Shared String SectionName [2934]
+    documentation "A locally-defined name for the section, generally created to make the section more recognizable in informal contexts and generally distinct from the SectionIdentifier."
+    min length 1
+    max length 100

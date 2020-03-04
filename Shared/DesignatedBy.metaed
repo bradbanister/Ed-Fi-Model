@@ -1,0 +1,4 @@
+Shared String DesignatedBy [39]
+    documentation "The person, organization, or department that made a student designation."
+    min length 1
+    max length 60

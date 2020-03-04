@@ -1,0 +1,4 @@
+Shared Decimal EventDuration [48]
+    documentation "The amount of time for the event as recognized by the school: 1 day = 1, 1/2 day = 0.5, 1/3 day = 0.33."
+    total digits 3
+    decimal places 2

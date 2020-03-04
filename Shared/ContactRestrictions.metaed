@@ -1,0 +1,4 @@
+Shared String ContactRestrictions [23]
+    documentation "Restrictions for student and/or teacher contact with the individual (e.g., the student may not be picked up by the individual)."
+    min length 1
+    max length 250

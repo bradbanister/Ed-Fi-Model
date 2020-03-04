@@ -1,0 +1,4 @@
+Shared String AddressLine [5]
+    documentation "A line of an address."
+    min length 1
+    max length 150

@@ -1,0 +1,24 @@
+Domain Entity StudentGradebookEntry [589]
+    documentation "This entity holds a student's grade or competency level for a gradebook entry."
+    date DateFulfilled [1751]
+        documentation "The date an assignment was turned in or the date of an assessment."
+        is optional
+    shared string GradeEarned named LetterGradeEarned [1754]
+        documentation "A final or interim (grading period) indicator of student performance in a class as submitted by the instructor."
+        is optional
+    shared decimal NumericGrade named NumericGradeEarned [1755]
+        documentation "A final or interim (grading period) indicator of student performance in a class as submitted by the instructor."
+        is optional
+    descriptor CompetencyLevel [1750]
+        documentation "The CompetencyLevel assessed for the student for the referenced LearningObjective."
+        is optional
+    shared string DiagnosticStatement [1752]
+        documentation "A statement provided by the teacher that provides information in addition to the grade or assessment score."
+        is optional
+    association StudentSectionAssociation [1756]
+        documentation "Relates the student associated with the GradebookEntry."
+        is part of identity
+    domain entity GradebookEntry [1753]
+        documentation "The GradebookEntry associated with the student grade or score."
+        is part of identity
+        merge GradebookEntry.Section with StudentSectionAssociation.Section

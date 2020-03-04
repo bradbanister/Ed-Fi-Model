@@ -1,0 +1,8 @@
+Choice StudentLearningObjectiveSectionOrProgramChoice [2506]
+    documentation "This choice type allows a StudentLearningObjective to be associated with either a Section or Program."
+    association StudentSectionAssociation [1766]
+        documentation "Relates the Student and Section associated with the LearningObjective."
+        is optional collection
+    association GeneralStudentProgramAssociation [1764]
+        documentation "Relates the Student and Program associated with the LearningObjective."
+        is optional collection
